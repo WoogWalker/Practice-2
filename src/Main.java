@@ -17,66 +17,52 @@ public class Main {
         int taskSelection = 0;
 
         while (menu){
-            System.out.println("Введи номер задания");
+            System.out.println("Введи номер задания ..");
             taskSelection = sc.nextInt();
             switch (taskSelection){
                 case 1:
                     First();
-                    System.out.println("________________");
                 break;
 
                 case 2:
                     Second();
-                    System.out.println("________________");
                 break;
 
                 case 3:
                     Third();
-                    System.out.println("________________");
                 break;
 
                 case 4:
                     Fourth();
-                    System.out.println("________________");
                 break;
 
                 case 5:
                     Fifth();
-                    System.out.println("________________");
                 break;
 
                 case 6:
                     Sixth();
-                    System.out.println("________________");
                 break;
 
                 case 7:
                     Seventh();
-                    System.out.println("________________");
                 break;
 
                 case 8:
                     Eighth();
-                    System.out.println("________________");
                 break;
 
                 case 9:
                     Ninth();
-                    System.out.println("________________");
                 break;
 
                 case 10:
                     Tenth();
-                    System.out.println("________________");
                 break;
 
                 case 11:
                     Eleventh();
-                    System.out.println("________________");
                 break;
-
-                case 12:
-                    System.out.println("coming soon ..");
 
                 case 0:
                     System.out.println("___EXIT___");
@@ -84,12 +70,11 @@ public class Main {
                 break;
 
                 default:
-                    System.out.println("не правильно, попробуйте еще раз.");
+                    System.out.println("не правильно, попробуйте еще раз ..");
                 break;
             }
         }
     }
-
     // task # 1
     public static void First(){
         Scanner sc = new Scanner(System.in);
@@ -115,7 +100,6 @@ public class Main {
         float a = sc.nextFloat();
 
         float s = (float)0.5 * a * h;
-
         System.out.println("S треугольника = " + s);
     }
 
@@ -452,6 +436,18 @@ public class Main {
         String str2 = "";
         int num1 = 0;
 
+        System.out.println("первая фраза");
+        str1 = sc.next();
+
+        System.out.println("вторая фраза");
+        str2 = sc.next();
+
+        System.out.println("количество отступов");
+        num1 = sc.nextInt();
+
+        StringBuffer newStr = new StringBuffer(str1);
+        newStr.insert(num1, str2);
+        System.out.println(newStr);
     }
 
     // task # 10
