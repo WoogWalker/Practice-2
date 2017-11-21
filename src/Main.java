@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class Main {
@@ -455,12 +456,21 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String str1 = "";
         String str2 = "";
+        int count = 0;
 
         System.out.println("введите первую фразу ..");
         str1 = sc.next();
 
         System.out.println("введите вторую фразу ..");
         str2 = sc.next();
+
+        if(str1 != null && str2 != null && str2.length() <= str1.length() && str1.contains(str2))
+            System.out.println("вторая фраза содержится в первой");
+        else
+            System.out.println("вторая фраза длинее первой,\nвторая фраза не содержится в первой");
+
+        count = str1.length() - str1.replace(str2, "").length();
+        System.out.println("вторая фраза содержится в первой " + count + " раз");
     }
 
     // task # 11
